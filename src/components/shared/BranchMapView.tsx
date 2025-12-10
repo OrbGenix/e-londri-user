@@ -196,8 +196,8 @@ export default function BranchMapView({
               position={[b.lat, b.lng]}
               icon={L.icon({
                 iconUrl: "/marker-icon-2x.png", // ← your custom blue-dot icon
-                iconSize: [20, 20],
-                iconAnchor: [10, 10],
+                iconSize: [20, 30],
+                iconAnchor: [30, 30],
               })}
               eventHandlers={{
                 click: () => setSelectedId(b.id),
