@@ -152,10 +152,6 @@ export default function Home() {
           initialCenter={[23.8103, 90.4125]}
         />
       </div>
-
-      <OrderForm branches={sampleBranches} selectedBranchId={1} />
-
-      <Footer />
     </main>
   );
 }

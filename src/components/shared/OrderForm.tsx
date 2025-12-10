@@ -23,14 +23,32 @@ type OrderFormState = {
 
 /* ---------------------- Props Type ---------------------- */
 type OrderFormProps = {
-  branches: Branch[];
   selectedBranchId?: number | string | null;
 };
 
-export default function OrderForm({
-  branches,
-  selectedBranchId,
-}: OrderFormProps) {
+const branches = [
+  {
+    id: 1,
+    name: "Dhanmondi Branch",
+    address: "House 42, Road 11, Dhanmondi",
+    lat: 23.746465,
+    lng: 90.376015,
+    phone: "+8801712345678",
+    hours: "9am - 9pm",
+  },
+  {
+    id: 2,
+    name: "Gulshan Branch",
+    address: "House 12, Gulshan 2",
+    lat: 23.7925,
+    lng: 90.4075,
+    phone: "+8801711111111",
+    hours: "8am - 8pm",
+  },
+  // add more...
+];
+
+export default function OrderForm({ selectedBranchId }: OrderFormProps) {
   const [form, setForm] = useState<OrderFormState>({
     name: "",
     phone: "",
@@ -59,7 +77,7 @@ export default function OrderForm({
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-blue-100 to-orange-100 p-6">
+    <div className=" flex items-center justify-center  p-6">
       <div className="bg-white rounded-3xl shadow-2xl w-full max-w-6xl flex overflow-hidden">
         {/* Left Side */}
         <div className="hidden lg:flex w-1/2 bg-blue-500 text-white flex-col justify-center items-center p-10 space-y-6">
